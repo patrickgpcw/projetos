@@ -1,5 +1,14 @@
 [] Criação das migrations
-[] Instalação do Voyager
 [] Instalação do Tailwind
-[] Criar relacionamento das tabelas
-[] Deixar o HTML similar ao layout proposto
+[] Criar 3 views, uma da home, uma do jogo escolhido e outra para cadastrar mais jogos
+
+
+
+
+
+
+anotação sobre o projeto
+
+- a intenção do projeto é fazer com que eu consiga entender como funciona as coisas por tras
+no Voyager, afinal ele vem com o intuito de facilitar a vida do programador. Com isso, não sera
+usado o Voyager de inicio nesse projeto.
