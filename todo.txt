@@ -1,0 +1,5 @@
+[] Criação das migrations
+[] Instalação do Voyager
+[] Instalação do Tailwind
+[] Criar relacionamento das tabelas
+[] Deixar o HTML similar ao layout proposto
