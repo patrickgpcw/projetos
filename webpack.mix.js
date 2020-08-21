@@ -16,7 +16,7 @@ mix.js('resources/js/app.js', 'public/js');
 const tailwindcss = require('tailwindcss')
 
 mix.sass('resources/sass/app.scss', 'public/css')
-  .options({
-    processCssUrls: false,
-    postCss: [ tailwindcss('./path/to/your/tailwind.config.js') ],
-  })
+   .options({
+      processCssUrls: true,
+      postCss: [ tailwindcss('tailwind.config.js') ],
+})

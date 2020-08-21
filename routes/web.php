@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('master');
-});
+Route::view('/', 'master');
+Route::get('/games', 'GameController@index')->name('games.index');
+Route::post('/games', 'GameController@store')->name('games.store');
