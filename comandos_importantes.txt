@@ -1,0 +1,9 @@
+Acessar MYSQL pelo vagrant
+
+vagrant ssh
+
+mysql
+
+show databases [mostrar o banco de dados]
+drop database *nome da tabela* [deletar tabela]
+creat database *nome da tabela* [criar tabela]

@@ -14,7 +14,7 @@ class GameController extends Controller
      */
     public function index()
     {
-        return view('games', ['games'=> Game::all()]);
+        return view('games.index', ['games'=> Game::all()]);
     }
 
     /**
@@ -35,10 +35,13 @@ class GameController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'gameName' => ['required', 'max:50'],
+        ]);
         $game = new Game;
         $game->name = $request->input('gameName');
         $game->save();
-        return redirect()->back();
+        return back();
     }
 
     /**
@@ -60,7 +63,7 @@ class GameController extends Controller
      */
     public function edit(Game $game)
     {
-        //
+        return view('games.edit', ['game'=> $game]);
     }
 
     /**
@@ -72,7 +75,12 @@ class GameController extends Controller
      */
     public function update(Request $request, Game $game)
     {
-        //
+        $validatedData = $request->validate([
+            'gameName' => ['required', 'max:50'],
+        ]);
+        $game->name = $request->gameName;
+        $game->save();
+        return redirect()->route('games.index');
     }
 
     /**
@@ -83,6 +91,7 @@ class GameController extends Controller
      */
     public function destroy(Game $game)
     {
-        //
+        $game->delete();
+        return back();
     }
 }
