@@ -37,6 +37,7 @@ class GameController extends Controller
     {
         $validatedData = $request->validate([
             'gameName' => ['required', 'max:50'],
+            'gameDescription' => ['required']
         ]);
         $game = new Game;
         $game->name = $request->input('gameName');

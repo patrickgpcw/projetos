@@ -14,6 +14,10 @@
             Nome do jogo
         </label>
         <input type="text" name="gameName">
+        <label for="">
+            Descrição
+        </label>
+        <textarea type="text" name="gameDescription"></textarea>
         @if ($errors->any())
             <div class="alert alert-danger">
                 <ul>
@@ -35,6 +39,7 @@
     @foreach ($games as $game )
     <li>
         {{$game->name}}
+        {{$game->description}}
         <form action="{{route('games.destroy',['game'=>$game->id])}}" method="POST">
             @csrf
             @method('DELETE')
