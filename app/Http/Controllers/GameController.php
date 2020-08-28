@@ -41,6 +41,9 @@ class GameController extends Controller
         ]);
         $game = new Game;
         $game->name = $request->input('gameName');
+        $game->descripion = $request->input('gameDescription');
+        $game->photo = $request->input('gameImage');
+        $game->score = $request->input('gameScore');
         $game->save();
         return back();
     }
@@ -80,6 +83,10 @@ class GameController extends Controller
             'gameName' => ['required', 'max:50'],
         ]);
         $game->name = $request->gameName;
+        $game->description = $request->gameDescription;
+        $game->descripion = $request->gameDescriptio;
+        $game->photo = $request->gameImage;
+        $game->score = $request->gameScore;
         $game->save();
         return redirect()->route('games.index');
     }

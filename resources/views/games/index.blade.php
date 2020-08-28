@@ -15,6 +15,14 @@
         </label>
         <input type="text" name="gameName">
         <label for="">
+            Imagem
+        </label>
+        <input type="file" name="gameImage">
+        <label for="">
+            Nota
+        </label>
+        <input type="search" name="gameScore">
+        <label for="">
             Descrição
         </label>
         <textarea type="text" name="gameDescription"></textarea>
