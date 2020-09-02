@@ -37,12 +37,13 @@ class GameController extends Controller
     {
         $validatedData = $request->validate([
             'gameName' => ['required', 'max:50'],
-            'gameDescription' => ['required']
+            'gameDescription' => ['required'],
+            'game'
         ]);
         $game = new Game;
         $game->name = $request->input('gameName');
-        $game->descripion = $request->input('gameDescription');
-        $game->photo = $request->input('gameImage');
+        $game->description = $request->input('gameDescription');
+        $game->image = $request->input('gameImage');
         $game->score = $request->input('gameScore');
         $game->save();
         return back();
@@ -84,8 +85,7 @@ class GameController extends Controller
         ]);
         $game->name = $request->gameName;
         $game->description = $request->gameDescription;
-        $game->descripion = $request->gameDescriptio;
-        $game->photo = $request->gameImage;
+        $game->image = $request->gameImage;
         $game->score = $request->gameScore;
         $game->save();
         return redirect()->route('games.index');

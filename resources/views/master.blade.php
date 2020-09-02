@@ -6,13 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Patrick Estudo</title>
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
-
 </head>
 <body>
     @include("shared.navbar")
-    <div id="app">
-        @yield('content')
-    </div>
-
+    @yield("content")
 </body>
 </html>

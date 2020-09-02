@@ -48,6 +48,7 @@
     <li>
         {{$game->name}}
         {{$game->description}}
+        {{$game->score}}
         <form action="{{route('games.destroy',['game'=>$game->id])}}" method="POST">
             @csrf
             @method('DELETE')

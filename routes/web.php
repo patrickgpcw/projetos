@@ -19,3 +19,6 @@ Route::post('/games', 'GameController@store')->name('games.store');
 Route::delete('/games/{game}', 'GameController@destroy')->name('games.destroy');
 Route::get('/games/{game}/edit', 'GameController@edit')->name('games.edit');
 Route::put('/games/{game}', 'GameController@update')->name('games.update');
+
+
+Route::get('/home', 'HomeController@index')->name('home');

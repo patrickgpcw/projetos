@@ -4,6 +4,10 @@ vagrant ssh
 
 mysql
 
-show databases [mostrar o banco de dados]
-drop database *nome da tabela* [deletar tabela]
-creat database *nome da tabela* [criar tabela]
+show databases; [mostrar o banco de dados]
+drop database *nome da tabela*; [deletar tabela]
+creat database *nome da tabela*; [criar tabela]
+
+
+npm run prod [minificar o css e js]
+

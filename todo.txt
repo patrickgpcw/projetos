@@ -2,6 +2,7 @@
 [] Criar 3 views, uma da home, uma do jogo escolhido e outra para cadastrar mais jogos
 [] Criar cadastro do usuario
 [] Criar autenticação para entrar e favoritar o jogo
+[] Sempre atualizar os arquivos node e composer
 
 
 
